@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Header } from "@/components/Header";
-import { ProductCard } from "@/components/ProductCard";
 import { TestimonialScroll } from "@/components/TestimonialScroll";
-import { ShopifyProduct, getProducts } from "@/lib/shopify";
-import { Loader2, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, Loader2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,6 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Link } from "react-router-dom";
 
 const contactFormSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -22,8 +21,6 @@ const contactFormSchema = z.object({
 });
 
 const Index = () => {
-  const [products, setProducts] = useState<ShopifyProduct[]>([]);
-  const [loading, setLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -35,21 +32,6 @@ const Index = () => {
       message: "",
     },
   });
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const fetchedProducts = await getProducts();
-        setProducts(fetchedProducts);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
 
   const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
     setIsSubmitting(true);
@@ -127,36 +109,44 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section id="services" className="py-16 md:py-20 bg-background scroll-mt-20">
+      {/* Services CTA Section */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">
-              Our <span className="text-primary">Services</span>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+              Transform Your <span className="text-primary">Vehicle</span>
             </h2>
-            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Professional automotive customization services tailored to your vehicle
+            <p className="text-base md:text-xl text-muted-foreground mb-8 md:mb-12 px-4">
+              From stunning starlight headliners to advanced tech retrofits, we offer premium 
+              automotive customization services that bring luxury and innovation to your drive.
             </p>
-          </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 md:mb-12 max-w-2xl mx-auto">
+              <div className="bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-primary/20">
+                <div className="text-2xl mb-2">⭐</div>
+                <div className="text-sm font-medium">Starlights</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-primary/20">
+                <div className="text-2xl mb-2">💡</div>
+                <div className="text-sm font-medium">Ambient Lighting</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-primary/20">
+                <div className="text-2xl mb-2">📱</div>
+                <div className="text-sm font-medium">CarPlay</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur-sm p-4 rounded-lg border border-primary/20">
+                <div className="text-2xl mb-2">🎨</div>
+                <div className="text-sm font-medium">& More</div>
+              </div>
+            </div>
 
-          {loading ? (
-            <div className="flex justify-center py-20">
-              <Loader2 className="w-8 h-8 animate-spin text-primary" />
-            </div>
-          ) : products.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-xl text-muted-foreground mb-4">No products found</p>
-              <p className="text-muted-foreground">
-                Products will appear here once they are added to the store.
-              </p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {products.map((product) => (
-                <ProductCard key={product.node.id} product={product} />
-              ))}
-            </div>
-          )}
+            <Link to="/services">
+              <Button size="lg" className="text-lg px-8 py-6">
+                View All Services
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

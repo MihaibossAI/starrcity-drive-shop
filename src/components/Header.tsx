@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
-import { ShoppingCart, Instagram } from "lucide-react";
+import { ShoppingCart, Instagram, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useCartStore } from "@/stores/cartStore";
 import logo from "@/assets/logo.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const Header = () => {
   const items = useCartStore(state => state.items);
@@ -16,16 +22,7 @@ export const Header = () => {
           <img src={logo} alt="Starr City Customs" className="h-10 md:h-12 w-auto" />
         </Link>
 
-        <div className="flex items-center gap-3 md:gap-6">
-          <a 
-            href="#services"
-            className="text-sm md:text-base"
-          >
-            <Button variant="ghost" className="text-foreground hover:text-primary text-sm md:text-base px-2 md:px-4">
-              Services
-            </Button>
-          </a>
-          
+        <div className="flex items-center gap-2 md:gap-4">
           <a 
             href="https://www.instagram.com/starrcitycustoms/" 
             target="_blank" 
@@ -45,6 +42,36 @@ export const Header = () => {
               )}
             </Button>
           </Link>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon" className="border-primary/20 hover:border-primary h-9 w-9 md:h-10 md:w-10">
+                <Menu className="h-4 w-4 md:h-5 md:w-5" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-48 bg-card z-50">
+              <DropdownMenuItem asChild>
+                <Link to="/" className="cursor-pointer">
+                  Home
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/services" className="cursor-pointer">
+                  Services
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="/#contact" className="cursor-pointer">
+                  Contact Us
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/testimonials" className="cursor-pointer">
+                  Testimonials
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </nav>
     </header>
