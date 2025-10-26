@@ -122,7 +122,7 @@ const Index = () => {
             Follow us on Instagram for the latest updates and showcase of our work
           </p>
           <a 
-            href="https://instagram.com/starrcitycustoms" 
+            href="https://www.instagram.com/starrcitycustoms/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:underline text-lg font-semibold"

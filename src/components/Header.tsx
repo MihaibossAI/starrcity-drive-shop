@@ -27,7 +27,7 @@ export const Header = () => {
           </a>
           
           <a 
-            href="https://instagram.com/starrcitycustoms" 
+            href="https://www.instagram.com/starrcitycustoms/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-foreground hover:text-primary transition-colors"
