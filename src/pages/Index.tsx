@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
+import { TestimonialScroll } from "@/components/TestimonialScroll";
 import { ShopifyProduct, getProducts } from "@/lib/shopify";
 import { Loader2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
@@ -62,14 +63,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="py-20 bg-background">
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-20 bg-card/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+              What Our <span className="text-primary">Customers Say</span>
+            </h2>
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+              Trusted by car enthusiasts across Huddersfield
+            </p>
+          </div>
+          <TestimonialScroll />
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="services" className="py-16 md:py-20 bg-background scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">
               Our <span className="text-primary">Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Professional automotive customization services tailored to your vehicle
             </p>
           </div>
@@ -96,13 +112,13 @@ const Index = () => {
       </section>
 
       {/* Location Section */}
-      <section className="py-20 bg-card/50">
+      <section className="py-16 md:py-20 bg-card/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Find Us in Huddersfield</h2>
-          <p className="text-xl text-muted-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Find Us in Huddersfield</h2>
+          <p className="text-lg md:text-xl text-muted-foreground mb-3 md:mb-4">
             📍 Huddersfield, West Yorkshire
           </p>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 px-4">
             Follow us on Instagram for the latest updates and showcase of our work
           </p>
           <a 

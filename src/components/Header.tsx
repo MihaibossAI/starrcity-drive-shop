@@ -11,17 +11,20 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Starr City Customs" className="h-12 w-auto" />
+      <nav className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2 md:gap-3">
+          <img src={logo} alt="Starr City Customs" className="h-10 md:h-12 w-auto" />
         </Link>
 
-        <div className="flex items-center gap-6">
-          <Link to="/testimonials">
-            <Button variant="ghost" className="text-foreground hover:text-primary">
-              Testimonials
+        <div className="flex items-center gap-3 md:gap-6">
+          <a 
+            href="#services"
+            className="text-sm md:text-base"
+          >
+            <Button variant="ghost" className="text-foreground hover:text-primary text-sm md:text-base px-2 md:px-4">
+              Services
             </Button>
-          </Link>
+          </a>
           
           <a 
             href="https://instagram.com/starrcitycustoms" 
@@ -29,12 +32,12 @@ export const Header = () => {
             rel="noopener noreferrer"
             className="text-foreground hover:text-primary transition-colors"
           >
-            <Instagram className="h-5 w-5" />
+            <Instagram className="h-4 w-4 md:h-5 md:w-5" />
           </a>
 
           <Link to="/cart">
-            <Button variant="outline" size="icon" className="relative border-primary/20 hover:border-primary">
-              <ShoppingCart className="h-5 w-5" />
+            <Button variant="outline" size="icon" className="relative border-primary/20 hover:border-primary h-9 w-9 md:h-10 md:w-10">
+              <ShoppingCart className="h-4 w-4 md:h-5 md:w-5" />
               {totalItems > 0 && (
                 <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs bg-primary">
                   {totalItems}
