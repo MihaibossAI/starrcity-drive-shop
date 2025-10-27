@@ -12,6 +12,7 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Link } from "react-router-dom";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const contactFormSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -199,8 +200,108 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 md:py-20 bg-card/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+                Frequently Asked <span className="text-primary">Questions</span>
+              </h2>
+              <p className="text-base md:text-xl text-muted-foreground px-4">
+                Everything you need to know about our services
+              </p>
+            </div>
+
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  How long does installation take?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Installation times vary depending on the service. Simple installations like ambient lighting typically take 2-3 hours, 
+                  while more complex projects like starlight headliners can take 1-2 days. We'll provide you with an accurate time estimate 
+                  during your consultation.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  Do you offer a warranty on your work?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Yes! All our installations come with a 1-year warranty covering workmanship and materials. We stand behind the quality 
+                  of our work and use only premium components to ensure long-lasting results.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  Will modifications affect my vehicle warranty?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Most of our installations are non-invasive and won't affect your manufacturer's warranty. However, we recommend checking 
+                  with your dealer first. We can also provide documentation of our work if needed for warranty purposes.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  What vehicles do you work on?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  We work on all makes and models, from everyday cars to luxury and performance vehicles. Whether you drive a BMW, 
+                  Mercedes, Audi, Range Rover, or any other brand, we have the expertise and equipment to customize your vehicle.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  How much do your services cost?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Pricing varies based on the service, your vehicle model, and specific requirements. Check our Services page for 
+                  starting prices, or book a free consultation for a detailed quote tailored to your needs. We're committed to 
+                  transparent pricing with no hidden fees.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  Do I need to book an appointment?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Yes, we work by appointment only to ensure we give each project the time and attention it deserves. You can book 
+                  a consultation using the form below, call us at 07438719157, or message us on Instagram @starrcitycustoms.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  Can I see examples of your previous work?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Absolutely! Check out our Instagram @starrcitycustoms to see our latest projects, customer testimonials, and 
+                  before/after photos. We regularly post updates showcasing our work across different vehicle makes and customization types.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="text-left hover:no-underline">
+                  Where are you located?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  We're based in Huddersfield, West Yorkshire, and serve customers across the region. During your consultation, 
+                  we'll provide you with our exact location and directions to our workshop.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       {/* Contact/Booking Section */}
-      <section id="contact" className="py-16 md:py-20 bg-card/30">
+      <section id="contact" className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
