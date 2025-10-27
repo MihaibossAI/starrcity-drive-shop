@@ -300,6 +300,99 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Blog/Tips Section */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+                Tips & <span className="text-primary">Insights</span>
+              </h2>
+              <p className="text-base md:text-xl text-muted-foreground px-4">
+                Expert advice on automotive customization and trends
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {/* Blog Post 1 */}
+              <div className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
+                <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                  <div className="text-4xl">🚨</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    Why F1 Brake Lights are Essential for Safety
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    Discover how F1-style brake lights can significantly improve your vehicle's safety by providing better visibility during hard braking, reducing rear-end collision risks.
+                  </p>
+                  <div className="text-sm text-primary font-medium">Safety Upgrade</div>
+                </div>
+              </div>
+
+              {/* Blog Post 2 */}
+              <div className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
+                <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                  <div className="text-4xl">💡</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    Choosing the Perfect Ambient Lighting
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    Learn how to select the right ambient lighting colors and placement to create the perfect atmosphere in your vehicle's interior while maintaining a premium look.
+                  </p>
+                  <div className="text-sm text-primary font-medium">Customization Guide</div>
+                </div>
+              </div>
+
+              {/* Blog Post 3 */}
+              <div className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
+                <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                  <div className="text-4xl">🚗</div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    2025 Car Customization Trends
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    Stay ahead of the curve with the latest trends in automotive customization, from wireless CarPlay upgrades to advanced lighting systems and smart tech integration.
+                  </p>
+                  <div className="text-sm text-primary font-medium">Industry Trends</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Customer Stories */}
+            <div className="mt-12 bg-card/50 border border-border rounded-lg p-6 md:p-8">
+              <h3 className="text-2xl font-bold mb-6 text-center">
+                <span className="text-primary">Success Stories</span> from Our Customers
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="text-2xl">⭐</div>
+                    <div className="font-semibold">BMW 5 Series Transformation</div>
+                  </div>
+                  <p className="text-muted-foreground">
+                    "The starlight headliner completely transformed my BMW's interior. It looks absolutely stunning at night and feels like a luxury upgrade. Worth every penny!" - Sarah M.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="text-2xl">📱</div>
+                    <div className="font-semibold">Range Rover Tech Upgrade</div>
+                  </div>
+                  <p className="text-muted-foreground">
+                    "Adding wireless CarPlay to my Range Rover was seamless. The team was professional, and the installation looks factory-fitted. Game changer for daily drives!" - James T.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact/Booking Section */}
       <section id="contact" className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
