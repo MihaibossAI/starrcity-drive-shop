@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { TestimonialScroll } from "@/components/TestimonialScroll";
-import { Phone, Mail, MapPin, ArrowRight, Loader2 } from "lucide-react";
+import { Phone, Instagram, MapPin, ArrowRight, Loader2 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -302,7 +302,7 @@ const Index = () => {
                 </a>
               </div>
               <div className="flex flex-col items-center gap-2">
-                <Mail className="h-5 w-5 text-primary" />
+                <Instagram className="h-5 w-5 text-primary" />
                 <a href="https://www.instagram.com/starrcitycustoms/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                   @starrcitycustoms
                 </a>

@@ -39,7 +39,7 @@ export const CartDrawer = () => {
               Add some premium automotive customization services to get started.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <a href="/">Browse Services</a>
+              <a href="/services">Continue Shopping</a>
             </Button>
           </div>
         </div>
@@ -120,24 +120,35 @@ export const CartDrawer = () => {
               </span>
             </div>
             
-            <Button 
-              onClick={handleCheckout}
-              className="w-full bg-primary hover:bg-primary/90" 
-              size="lg"
-              disabled={items.length === 0 || isLoading}
-            >
-              {isLoading ? (
-                <>
-                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                  Creating Checkout...
-                </>
-              ) : (
-                <>
-                  <ExternalLink className="w-5 h-5 mr-2" />
-                  Proceed to Checkout
-                </>
-              )}
-            </Button>
+            <div className="space-y-3">
+              <Button 
+                onClick={handleCheckout}
+                className="w-full bg-primary hover:bg-primary/90" 
+                size="lg"
+                disabled={items.length === 0 || isLoading}
+              >
+                {isLoading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                    Creating Checkout...
+                  </>
+                ) : (
+                  <>
+                    <ExternalLink className="w-5 h-5 mr-2" />
+                    Proceed to Checkout
+                  </>
+                )}
+              </Button>
+              
+              <Button 
+                asChild
+                variant="outline"
+                className="w-full" 
+                size="lg"
+              >
+                <a href="/services">Continue Shopping</a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
