@@ -28,6 +28,7 @@ export const Header = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="text-foreground hover:text-primary transition-colors"
+            aria-label="Visit our Instagram"
           >
             <Instagram className="h-4 w-4 md:h-5 md:w-5" />
           </a>
