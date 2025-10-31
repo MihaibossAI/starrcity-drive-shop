@@ -33,11 +33,17 @@ export const Header = () => {
             <Instagram className="h-4 w-4 md:h-5 md:w-5" />
           </a>
 
-          <a href="/#contact">
+          <Link to="/services">
+            <Button variant="outline" size="sm" className="hidden md:flex border-primary/20 hover:border-primary">
+              Services
+            </Button>
+          </Link>
+
+          <Link to="/#contact">
             <Button variant="default" size="sm" className="hidden md:flex">
               Book Consultation
             </Button>
-          </a>
+          </Link>
 
           <Link to="/cart">
             <Button variant="outline" size="icon" className="relative border-primary/20 hover:border-primary h-9 w-9 md:h-10 md:w-10">
@@ -68,9 +74,9 @@ export const Header = () => {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="/#contact" className="cursor-pointer">
+                <Link to="/#contact" className="cursor-pointer">
                   Book Consultation
-                </a>
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link to="/testimonials" className="cursor-pointer">

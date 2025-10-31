@@ -402,7 +402,7 @@ const Index = () => {
                 Book Your <span className="text-primary">Consultation</span>
               </h2>
               <p className="text-base md:text-xl text-muted-foreground px-4">
-                Ready to transform your vehicle? Fill out the form below and we'll get back to you within 24 hours.
+                Ready to transform your vehicle but don't know what to pick? Fill out the form below and we'll help you choose the perfect customization for your needs.
               </p>
             </div>
 
