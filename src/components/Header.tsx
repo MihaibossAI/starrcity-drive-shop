@@ -39,11 +39,11 @@ export const Header = () => {
             </Button>
           </Link>
 
-          <Link to="/#contact">
+          <a href="/#contact">
             <Button variant="default" size="sm" className="hidden md:flex">
               Book Consultation
             </Button>
-          </Link>
+          </a>
 
           <Link to="/cart">
             <Button variant="outline" size="icon" className="relative border-primary/20 hover:border-primary h-9 w-9 md:h-10 md:w-10">
@@ -74,9 +74,9 @@ export const Header = () => {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/#contact" className="cursor-pointer">
+                <a href="/#contact" className="cursor-pointer">
                   Book Consultation
-                </Link>
+                </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link to="/testimonials" className="cursor-pointer">
