@@ -28,14 +28,14 @@ const Services = () => {
       <Header />
       
       {/* Services Header */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-20 bg-background">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-              Our <span className="text-primary">Services</span>
+          <div className="text-center mb-12 md:mb-16">
+            <h1 className="font-serif text-5xl md:text-7xl font-bold mb-4 md:mb-6">
+              Our <span className="text-primary">Services.</span>
             </h1>
-            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Professional automotive customization services tailored to your vehicle
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+              Tailored customization for every style.
             </p>
           </div>
 

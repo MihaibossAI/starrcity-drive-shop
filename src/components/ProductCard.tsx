@@ -40,7 +40,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const image = node.images.edges[0]?.node;
 
   return (
-    <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden group">
+    <Card className="bg-background border-2 border-primary/30 hover:border-primary transition-all duration-300 overflow-hidden group">
       <Link to={`/product/${node.handle}`}>
         <div className="aspect-square overflow-hidden bg-secondary/20">
           {image ? (
@@ -58,7 +58,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       </Link>
       
       <CardHeader>
-        <CardTitle className="text-xl">{node.title}</CardTitle>
+        <CardTitle className="font-serif text-2xl">{node.title}</CardTitle>
         {node.description && (
           <CardDescription className="line-clamp-2">{node.description}</CardDescription>
         )}
@@ -73,10 +73,11 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       <CardFooter>
         <Button 
           onClick={handleAddToCart}
-          className="w-full bg-primary hover:bg-primary/90"
+          variant="gold"
+          className="w-full"
           size="lg"
         >
-          Add to Cart
+          Book Now
         </Button>
       </CardFooter>
     </Card>
