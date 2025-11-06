@@ -74,11 +74,11 @@ const Index = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center py-32">
           <h1 className="font-serif text-6xl md:text-8xl font-bold mb-6 leading-tight">
-            Look Sharp.<br />
-            <span className="text-primary">Feel Confident.</span>
+            Drive Luxury.<br />
+            <span className="text-primary">Live Innovation.</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Starr City Customs delivers precision installations, premium upgrades, and automotive customization crafted for your style.
+            Starr City Customs delivers precision installations, premium upgrades, and automotive customization crafted for your vehicle.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="/#contact">
@@ -116,18 +116,18 @@ const Index = () => {
             </div>
             <div>
               <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Craftsmanship<br />
-                <span className="text-primary">Meets Passion.</span>
+                Precision Engineering<br />
+                <span className="text-primary">Meets Artistry.</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                At Starr City Customs, every installation tells a story. We blend modern technology with precision craftsmanship to deliver the perfect upgrade — whether you're in for ambient lighting or a complete tech transformation.
+                At Starr City Customs, every installation is a masterpiece. We blend cutting-edge automotive technology with meticulous craftsmanship to deliver factory-quality upgrades — from ambient lighting to complete interior transformations.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Step into our workshop, relax, and leave with a vehicle that turns heads.
+                Experience premium customization where innovation meets luxury, and drive away with a vehicle that commands attention.
               </p>
               <Link to="/services">
                 <Button variant="gold" size="lg">
-                  Meet Your Customizer
+                  Explore Our Work
                 </Button>
               </Link>
             </div>
@@ -143,7 +143,7 @@ const Index = () => {
               Our Services.
             </h2>
             <p className="text-xl text-muted-foreground">
-              Tailored customization for every style.
+              Premium upgrades tailored to your vehicle.
             </p>
           </div>
 
@@ -194,11 +194,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6">
-              The Look. The Vibe.<br />
-              <span className="text-primary">The Experience.</span>
+              The Quality. The Detail.<br />
+              <span className="text-primary">The Excellence.</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Trusted by car enthusiasts across Huddersfield
+              Trusted by car enthusiasts across Huddersfield & West Yorkshire
             </p>
           </div>
           <TestimonialScroll />

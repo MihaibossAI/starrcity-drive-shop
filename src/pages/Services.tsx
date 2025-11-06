@@ -35,7 +35,7 @@ const Services = () => {
               Our <span className="text-primary">Services.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Tailored customization for every style.
+              Premium upgrades tailored to your vehicle.
             </p>
           </div>
 
